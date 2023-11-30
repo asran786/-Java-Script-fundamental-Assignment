@@ -1,0 +1,186 @@
+Q1. Explain the role of operators in JavaScript. Why are they essential in programming?
+Ans 1: Operators in JavaScript are fundamental symbols or constructs used to perform operations on variables and values. They manipulate data, perform calculations, and allow developers to create logical and mathematical expressions. These operations are essential for writing functional, dynamic, and complex programs. Operators serve several critical roles in programming:
+
+Performing Mathematical Calculations:
+
+Arithmetic operators (+, -, *, /, %) perform basic mathematical calculations like addition, subtraction, multiplication, division, and modulus.
+Comparison and Logical Operations:
+
+Comparison operators (==, ===, !=, !==, >, <, >=, <=) compare values and return logical results (true or false) based on conditions.
+Logical operators (&&, ||, !) allow combining multiple conditions to create more complex logic.
+Assignment and Modification:
+
+Assignment operators (=, +=, -=, *=, /=, %=) assign values to variables and modify their contents based on specified operations.
+String Concatenation:
+
+The + operator can concatenate (join together) strings, allowing the creation of larger strings by combining smaller ones.
+Bitwise Operations:
+
+Bitwise operators (&, |, ^, ~, <<, >>, >>>) manipulate individual bits within binary representations of numbers.
+Ternary Operator:
+
+The ternary operator (condition ? value1 : value2) is a concise way of writing conditional expressions, assigning a value based on a condition.
+Operators are essential in programming for various reasons:
+
+Expression Building: Operators allow the creation of expressions that dictate how data should be processed, modified, or compared, enabling the creation of complex algorithms and logical structures.
+
+Data Manipulation: They facilitate the manipulation of data by performing calculations, comparisons, and logical operations, allowing programmers to transform and process data according to specific requirements.
+
+Control Flow: Operators are integral to control flow structures like loops, conditionals, and decision-making, which form the backbone of programming logic.
+
+Efficiency and Performance: Proper utilization of operators can lead to more efficient code execution and improved performance by leveraging built-in functionalities for common operations.
+
+Expressing Intent: Using appropriate operators and expressing operations clearly with them enhances code readability, allowing developers to understand the logic and purpose behind different operations.
+
+Que 2: Describe the categorization of operators in JavaScript based on their functionality. Provide examples for
+each category.
+Ans 2:Arithmetic Operators:
+
+Perform arithmetic calculations on numeric values.
+javascript
+Copy code
+let a = 10;
+let b = 5;
+let sum = a + b; // Addition
+let difference = a - b; // Subtraction
+let product = a * b; // Multiplication
+let quotient = a / b; // Division
+let remainder = a % b; // Modulus (Remainder after division)
+Comparison Operators:
+
+Compare values and return logical results (true or false) based on conditions.
+javascript
+Copy code
+let x = 10;
+let y = 5;
+console.log(x > y); // Greater than
+console.log(x < y); // Less than
+console.log(x === y); // Equal to (strict equality)
+console.log(x !== y); // Not equal to (strict inequality)
+Logical Operators:
+
+Combine or modify logical values and expressions.
+javascript
+Copy code
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue && isFalse); // Logical AND
+console.log(isTrue || isFalse); // Logical OR
+console.log(!isTrue); // Logical NOT (Negation)
+Assignment Operators:
+
+Assign values to variables and perform operations along with assignment.
+javascript
+Copy code
+let a = 10;
+a += 5; // Equivalent to: a = a + 5;
+let b = 20;
+b -= 3; // Equivalent to: b = b - 3;
+Unary Operators:
+
+Operators that act on a single operand.
+javascript
+Copy code
+let x = 5;
+console.log(++x); // Increment x before its value is used
+console.log(--x); // Decrement x before its value is used
+Bitwise Operators:
+
+Perform bitwise operations on binary representations of numbers.
+javascript
+Copy code
+let a = 5; // Binary representation: 0101
+let b = 3; // Binary representation: 0011
+console.log(a & b); // Bitwise AND: 0001
+console.log(a | b); // Bitwise OR: 0111
+Conditional (Ternary) Operator:
+
+A conditional operator that assigns a value based on a condition.
+javascript
+Copy code
+let age = 20;
+let status = (age >= 18) ? 'Adult' : 'Minor';
+
+Que 3: Differentiate between unary, binary, and ternary operators in JavaScript. Give examples of each.
+Ans 3: 
+Unary Operators:
+Operands: Unary operators work with a single operand.
+Examples:
+++ (Increment): Increases the value of a variable by 1.
+-- (Decrement): Decreases the value of a variable by 1.
+! (Logical NOT): Negates the value of a boolean, converting true to false and vice versa.
+
+Binary Operators:
+Operands: Binary operators work with two operands.
+Examples:
++ (Addition): Adds two values together.
+- (Subtraction): Subtracts one value from another.
+* (Multiplication): Multiplies two values.
+/ (Division): Divides one value by another.
+=== (Strict Equality): Compares two values for equality without type conversion.
+
+Que 4: Discuss the precedence and associativity of operators in JavaScript. Why is understanding these concepts
+important?
+Ans 4Operator Precedence defines the hierarchy of operators in terms of their priority during evaluation. Operators with higher precedence are executed first. For instance, in an expression like 2 + 3 * 4, the multiplication (*) has higher precedence than addition (+). Therefore, 3 * 4 is evaluated first, resulting in 12, which is then added to 2 to produce 14. However, parentheses can alter this hierarchy, allowing control over the sequence of operations.
+
+Associativity comes into play when multiple operators of the same precedence level are present. It determines the direction in which these operators are evaluated. For instance, with left-to-right associativity, expressions are evaluated from left to right. Consider 5 - 3 + 2; subtraction is evaluated first (5 - 3 results in 2), followed by addition (2 + 2 results in 4).
+
+Q5. Write a JavaScript program that calculates the simple interest using the formula Simple interest =
+(principal * rate * time) / 100.
+Ans 5:
+function calculateSimpleInterest(principal, rate, time) {
+    let interest = (principal * rate * time) / 100;
+    return interest;
+}
+
+
+let principalAmount = 1000; // Principal amount
+let interestRate = 5; 
+let timePeriod = 2; 
+
+
+let simpleInterest = calculateSimpleInterest(principalAmount, interestRate, timePeriod);
+
+
+console.log('Simple Interest:', simpleInterest);
+
+
+Q6. Write a Javascript program to calculate the Body Mass Index (BMI) using the formula BMI = weight (kg)/
+height * height.
+Ans 6:
+// Function to calculate BMI
+function calculateBMI(weight, height) {
+    // Convert height from centimeters to meters
+    height = height / 100;
+
+    // Calculate BMI using the formula
+    let bmi = weight / (height * height);
+    return bmi;
+}
+
+// Example usage:
+let weightInKg = 68; // Weight in kilograms
+let heightInCm = 175; // Height in centimeters
+
+// Calculate BMI using the function
+let bmiResult = calculateBMI(weightInKg, heightInCm);
+
+// Display the calculated BMI
+console.log('BMI:', bmiResult);
+
+
+Q7. Write a program in JavaScript to calculate the area of a circle given its radius value of 10. Use appropriate
+arithmetic operators.
+Ans 7:
+// Define the radius of the circle
+let radius = 10;
+
+// Calculate the area of the circle using the formula: area = π * radius * radius
+let area = Math.PI * radius * radius;
+
+// Display the calculated area
+console.log('The area of the circle with radius', radius, 'is:', area.toFixed(2));
+
+The variable radius is set to 10, representing the radius of the circle.
+The formula for the area of a circle (π * radius^2) is used to calculate the area, where Math.PI represents the mathematical constant π.
+area.toFixed(2) is used to round the calculated area to two decimal places for better readability.
